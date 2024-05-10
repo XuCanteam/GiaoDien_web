@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Document</title>
+  <link rel="stylesheet" href="asset/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="asset/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="asset/css/layout.css">
+  <script src="asset/jquery/jquery-3.7.1.min.js"></script>
+</head>
+<style>
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card {
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  .card-img-top {
+    width: 400px;
+    height: 400px;
+    /* Đặt kích thước cố định cho chiều cao của ảnh */
+    object-fit: cover;
+    /* Đảm bảo ảnh không bị biến đổi tỉ lệ */
+  }
+
+  .card-img-top {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+</style>
+
+<body>
+  <header class="section_header bg-while">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <a href="index.html">
+            <img src="asset/image/logo.webp" class="img-fluid" alt="">
+          </a>
+        </div>
+
+        <div class="col-md-8 py-3">
+          <ul class="nav bg-body-tertiary">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="#">Về chúng tôi</a>
+            </li>
+            <div class="dropdown">
+              <a class="btn dropdown-toggle" href="product.html" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Sản phẩm
+              </a>
+              <ul class="dropdown-menu font-monospace">
+                <li><a class="dropdown-item" href="product.html">Áo</a></li>
+                <li><a class="dropdown-item" href="#">Quần</a></li>
+                <li><a class="dropdown-item" href="#">Giày & Phụ kiện</a></li>
+                <li><a class="dropdown-item" href="#">Collection</a></li>
+                <li><a class="dropdown-item" href="#">Best Saler</a></li>
+              </ul>
+            </div>
+            <li class="nav-item">
+              <a class="nav-link text-yellow" href="#">Sale</a>
+            </li>
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Tin tức
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">hot</a></li>
+                <li><a class="dropdown-item" href="#">mới</a></li>
+                <li><a class="dropdown-item" href="#">quan tâm</a></li>
+              </ul>
+            </div>
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Khách hàng
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Đăng nhập<a></li>
+                <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
+                <li><a class="dropdown-item" href="#">Đăng kí tài khoản</a></li>
+              </ul>
+            </div>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="contact.html">Liên hệ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="#">Cửa hàng</a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="col-md-2 py-3">
+          <ul class="nav justify-content-end">
+            <li class="nav-item px-2">
+              <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </li>
+            <li class="nav-item px-2">
+              <a href="#"><i class="fa-regular fa-user"></i></a>
+            </li>
+            <li class="nav-item px-2 position-relative">
+              <a href="#"><i class="fa-regular fa-heart"></i></a>
+            </li>
+            <li class="nav-item px-2">
+              <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </header>
+  <!-- Phẩn conten -->
+  <div class="row">
+    <div class="carousel-item active">
+      <img src="../Luong_Chi_Hien/asset/image/Screenshot 2024-05-06 234855.png" class="d-block w-100" alt="">
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md">
+      </div>
+      <div class="col-md-5 py-3">
+        <a href="">
+          <img src="../Luong_Chi_Hien/asset/image/sp1.png" alt="" width="100%">
+        </a>
+      </div>
+      <div class="col-md-6">
+        <h1>Sản Phẩm 1 </h1>
+        <div class="row">
+          <div class="col-md py-3">
+            <p>Thương Hiệu: <span style="text-align:center; color:blue;">DennyShop</span></p>
+          </div>
+          <div class="col-md py-3">
+            <p>Tình Trạng: <span style="text-align:center; color:blue;">Còn Hàng</span></p>
+          </div>
+        </div>
+        <h3>Giá Tiền: <span style="text-align:center; color:blue;">200.000đ</span></h3>
+        <h5>Mô Tả: </h5>
+        <div>
+          áo gì gì đó
+        </div>
+        <h5>Thêm Voucher</h5>
+        <form>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Nhập mã voucher" aria-label="Nhập mã voucher"
+              aria-describedby="button-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="button" id="button-addon2">Thêm</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="voucher">Chọn voucher:</label>
+            <select class="form-control" id="voucher">
+              <option value="">Chọn voucher</option>
+              <option value="voucher1">Voucher 1 - Giảm 10%</option>
+              <option value="voucher2">Voucher 2 - Miễn phí vận chuyển</option>
+              <!-- Thêm các voucher khác nếu cần -->
+            </select>
+          </div>
+        </form>
+        <div class="row">
+          <div class="col-md-2 py-4">
+            Số lượng:
+          </div>
+          <div class="col-md-2 py-3">
+            <input type="number" class="form-control" id="quantity" value="1" min="1">
+          </div>
+          <div class="col-md-8 py-3">
+            <button type="button" class="btn btn-success btn-buy-now" style="width:100%;"><i
+                class="fas fa-cart-plus"></i>Thêm vào giỏ</button>
+          </div>
+        </div>
+        <div class="row">
+          <button type="button" class="btn btn-success btn-buy-now">Mua hàng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sản phẩm cùng danh mục -->
+  <div class="row">
+    <h2>Sản phẩm khác tương tự</h2>
+    <div class="col-md-3 py-3">
+      <a href="#">
+        <div class="card d-flex flex-column justify-content-center align-items-center">
+          <img src="../Luong_Chi_Hien/asset/image/sp1.png" class="card-img-top img-fluid" alt="...">
+        </div>
+      </a>
+      <a href="#" class="text-decoration-none">
+        <h5 style="text-align:center;">Product 1</h5>
+      </a>
+      <div class="row">
+        <div class="col-md">
+          <p class="price"><span class="">Giá: $18.99</span></p>
+        </div>
+        <div class="col-md">
+          Giá Cũ: <span class="original-price text-decoration-line-through">$22.99</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md">
+          <a href="#" class="btn btn-light">Xem sản phẩm</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 py-3">
+      <a href="#">
+        <div class="card d-flex flex-column justify-content-center align-items-center">
+          <img src="../Luong_Chi_Hien/asset/image/sp1.png" class="card-img-top img-fluid" alt="...">
+        </div>
+      </a>
+      <a href="#" class="text-decoration-none">
+        <h5 style="text-align:center;">Product 1</h5>
+      </a>
+      <div class="row">
+        <div class="col-md">
+          <p class="price"><span class="">Giá: $18.99</span></p>
+        </div>
+        <div class="col-md">
+          Giá Cũ: <span class="original-price text-decoration-line-through">$22.99</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md">
+          <a href="#" class="btn btn-light mr-2">Thêm vào giỏ hàng</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 py-3">
+      <a href="#">
+        <div class="card d-flex flex-column justify-content-center align-items-center">
+          <img src="../Luong_Chi_Hien/asset/image/sp1.png" class="card-img-top img-fluid" alt="...">
+        </div>
+      </a>
+      <a href="#" class="text-decoration-none">
+        <h5 style="text-align:center;">Product 1</h5>
+      </a>
+      <div class="row">
+        <div class="col-md">
+          <p class="price"><span class="">Giá: $18.99</span></p>
+        </div>
+        <div class="col-md">
+          Giá Cũ: <span class="original-price text-decoration-line-through">$22.99</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md">
+          <a href="#" class="btn btn-light">Xem sản phẩm</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 py-3">
+      <a href="#">
+        <div class="card d-flex flex-column justify-content-center align-items-center">
+          <img src="../Luong_Chi_Hien/asset/image/sp1.png" class="card-img-top img-fluid" alt="...">
+        </div>
+      </a>
+      <a href="#" class="text-decoration-none">
+        <h5 style="text-align:center;">Product 1</h5>
+      </a>
+      <div class="row">
+        <div class="col-md">
+          <p class="price"><span class="">Giá: $18.99</span></p>
+        </div>
+        <div class="col-md">
+          Giá Cũ: <span class="original-price text-decoration-line-through">$22.99</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md">
+          <a href="#" class="btn btn-light">Xem sản phẩm</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+    <!--  Phần footer-->
+    <footer class="section_footer bg-dark text-white pt-4">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-4">
+                  <h6>THÔNG TIN</h6>
+                  <ul class="list-unstyled justify-content-end">
+                      <li><i class="fa-brands fa-facebook"></i>
+                          Luong Chi Hien(Xù)
+                      </li>
+                      <li><i class="fa-brands fa-instagram"></i>
+                          1m80.60kg
+                      </li>
+                      <li><i class="fa-brands fa-youtube"></i>
+                          Xù Cân Team
+                      </li>
+                      <li><i class="fa-brands fa-github"></i>
+                          Hiền Tóc Xù
+                      </li>
+                  </ul>
+              </div>
+              <div class="col-md">
+                  <h6>LIÊN HỆ</h6>
+                  <p>
+                  <p id="address">Địa chỉ: Số 980, Ấp Vạt Lài, Xã Khánh Bình, An Phú, An Giang.</p>
+                  <p id="phone">Điện thoại: 03352383292</p>
+                  <p id="email">Email: xusuport@gmail.com</p>
+                  </p>
+              </div>
+              <div class="col-md">
+                  <h6>HƯỚNG DẪN</h6>
+              </div>
+              <div class="col-md-3">
+                  <h6>ĐĂNG KÝ NHẬN LINK</h6>
+              </div>
+          </div>
+      </div>
+      <hr class="m-0 p-0">
+      <div class="row">
+          <div class="col-12 text-center">
+              Bản Quyền thuộc về Hiền Tóc Xù. Thank Kiu
+          </div>
+      </div>
+  </footer>
+  <script src="asset/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="asset/js/lyout.js"></script>
+</body>
+
+</html>
