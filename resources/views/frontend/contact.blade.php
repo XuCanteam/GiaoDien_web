@@ -1,11 +1,6 @@
 @extends('layout.site')
 @section('content')
     {{-- Phần content ở dây --}}
-    <div class="row">
-        <div class="carousel-item active">
-            <img src="image/Screenshot 2024-05-06 234855.png" class="d-block w-100" alt="">
-        </div>
-    </div>
     <div class="container">
         <h4>Cửa hàng Sudes Fashion</h4>
         <div class="row">
@@ -66,6 +61,9 @@
             </div>
             <div class="col-md py3">
                 Google Map
+                <div class="map-responsive">
+                    <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=10.823418073863236, 106.63884193921126" width="800" height="600" frameborder="0" style="border:0;" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
 
@@ -73,7 +71,7 @@
 
 @endsection
 {{-- đặt tên cho trang web --}}
-@section('title', 'Trang Chủ')
+@section('title', 'Liên Hệ')
 {{-- Dùng để code css cho trang này --}}
 @section('header')
     <link rel="stylesheet" href="{{ asset('contact.css') }}">

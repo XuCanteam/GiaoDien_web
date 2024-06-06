@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Document</title>
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('fontawesome/css/all.min.css') }}">
     <script src="{{ asset('bootstrap/jquery/jquery-3.7.1.min.js') }}"></script>
-    <title> @yield('Title')</title>
+    <title> @yield('title')</title>
+    @yield('header')
 </head>
-
 <style>
     .carousel-item img {
         width: 100%;
@@ -29,12 +28,43 @@
         object-fit: cover;
         /* Đảm bảo ảnh không bị biến đổi tỉ lệ */
     }
-
     .card-img-top {
         max-width: 100%;
         max-height: 100%;
         object-fit: contain;
     }
+    /* Css cho thanh tìm kiếm */
+    .search-container {
+            position: relative;
+            display: inline-block;
+    }
+    .search-container input {
+        width: 0;
+        height: 25px;
+        transition: width 0.5s;
+        border-radius: 20px;
+        padding: 0 15px;
+        border: 1px solid #ccc;
+    }
+    .search-container:hover input {
+        width: 200px;
+    }
+    .search-icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25px;
+        height: 25px;
+        background-color: #007bff;
+        color: white;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    /*  */
 </style>
 
 <body>
@@ -42,72 +72,29 @@
   <header class="section_header bg-while">
         <div class="container">
             <div class="row">
+                {{-- logo --}}
                 <div class="col-md-2">
                     <a href="index.html">
                         <img src="image/logo.webp" class="img-fluid" alt="">
                     </a>
                 </div>
+                {{-- end logo --}}
+
+                {{-- Menu chỗ này --}}
                 <div class="col-md-8 py-3">
-                    <ul class="nav bg-body-tertiary">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="">Trang chủ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-black" href="#">Về chúng tôi</a>
-                        </li>
-                        <div class="dropdown">
-                            <a class="btn dropdown-toggle" href="san-pham" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Sản phẩm
-                            </a>
-                            <ul class="dropdown-menu font-monospace">
-                                <li><a class="dropdown-item" href="san-pham">Áo</a></li>
-                                <li><a class="dropdown-item" href="san-pham">Quần</a></li>
-                                <li><a class="dropdown-item" href="san-pham">Giày & Phụ kiện</a></li>
-                                <li><a class="dropdown-item" href="san-pham">Collection</a></li>
-                                <li><a class="dropdown-item" href="san-pham">Best Saler</a></li>
-                            </ul>
-                        </div>
-                        <li class="nav-item">
-                            <a class="nav-link text-yellow" href="#">Sale</a>
-                        </li>
-                        <div class="dropdown">
-                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Tin tức
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">hot</a></li>
-                                <li><a class="dropdown-item" href="#">mới</a></li>
-                                <li><a class="dropdown-item" href="#">quan tâm</a></li>
-                            </ul>
-                        </div>
-                        <div class="dropdown">
-                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Khách hàng
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Đăng nhập<a></li>
-                                <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
-                                <li><a class="dropdown-item" href="#">Đăng kí tài khoản</a></li>
-                            </ul>
-                        </div>
-                        <li class="nav-item">
-                            <a class="nav-link text-black" href="lien-he">Liên hệ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-black" href="#">Cửa hàng</a>
-                        </li>
-                    </ul>
+                    <x-main-menu />
                 </div>
-
-
+                {{-- end menu --}}
 
                 <div class="col-md-2 py-3">
                     <ul class="nav justify-content-end">
                         <li class="nav-item px-2">
-                            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                                <div class="search-container">
+                                    <input type="text" placeholder="Search...">
+                                    <div class="search-icon">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                </div>
                         </li>
                         <li class="nav-item px-2">
                             <a href="#"><i class="fa-regular fa-user"></i></a>
@@ -116,7 +103,7 @@
                             <a href="#"><i class="fa-regular fa-heart"></i></a>
                             <span
                                 class="position-absolute top-0 start-90 translate-middle badge rounded-pill bg-danger">
-                                +99
+
                                 <span class="visually-hidden">unread messages</span>
                             </span>
                         </li>
@@ -128,7 +115,11 @@
 
             </div>
         </div>
-
+        {{-- Slider ở đây --}}
+        <div class="row">
+            <x-slider/>
+        </div>
+        {{-- end slider --}}
   </header>
   <main>
     @yield('content')

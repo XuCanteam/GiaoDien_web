@@ -1,11 +1,6 @@
 @extends('layout.site')
 @section('content')
     {{-- Phần content ở dây --}}
-    <div class="row">
-        <div class="carousel-item active">
-            <img src="../image/Screenshot 2024-05-06 234855.png" class="d-block w-100" alt="">
-        </div>
-    </div>
 {{-- Phần mô tả sản phẩm và lựa chọn ở đây --}}
     <div class="container">
         <div class="row">
@@ -70,105 +65,95 @@
     </div>
 
     <!-- Sản phẩm cùng danh mục -->
-    <div class="row">
+    <div class="row py-3 px-3">
         <h2>Sản phẩm khác tương tự</h2>
-        <div class="col-md-3 py-3">
-            <a href="#">
-                <div class="card d-flex flex-column justify-content-center align-items-center">
-                    <img src="../image/sp1.png" class="card-img-top img-fluid" alt="...">
+        <x-card-category-same/>
+    </div>
+    {{-- Custommer Review--}}
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Đánh Giá Của Khách Hàng</h5>
+                <div class="media mb-4">
+                    <img src="https://via.placeholder.com/64" class="mr-3 rounded-circle" alt="Customer Image">
+                    <div class="media-body">
+                        <h6 class="mt-0">John Doe</h6>
+                        <div class="star-rating">
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9734;</span>
+                        </div>
+                        <p>This product is amazing! I've been using it for a week and it has exceeded my expectations.</p>
+                    </div>
                 </div>
-            </a>
-            <a href="#" class="text-decoration-none">
-                <h5 style="text-align:center;">Product 1</h5>
-            </a>
-            <div class="row">
-                <div class="col-md">
-                    <p class="price"><span class="">Giá: $18.99</span></p>
+                <div class="media mb-4">
+                    <img src="https://via.placeholder.com/64" class="mr-3 rounded-circle" alt="Customer Image">
+                    <div class="media-body">
+                        <h6 class="mt-0">Jane Smith</h6>
+                        <div class="star-rating">
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9734;</span>
+                            <span>&#9734;</span>
+                        </div>
+                        <p>Good quality but the price is a bit high for what it offers.</p>
+                    </div>
                 </div>
-                <div class="col-md">
-                    Giá Cũ: <span class="original-price text-decoration-line-through">$22.99</span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md">
-                    <a href="#" class="btn btn-light">Xem sản phẩm</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 py-3">
-            <a href="#">
-                <div class="card d-flex flex-column justify-content-center align-items-center">
-                    <img src="../image/sp1.png" class="card-img-top img-fluid" alt="...">
-                </div>
-            </a>
-            <a href="#" class="text-decoration-none">
-                <h5 style="text-align:center;">Product 1</h5>
-            </a>
-            <div class="row">
-                <div class="col-md">
-                    <p class="price"><span class="">Giá: $18.99</span></p>
-                </div>
-                <div class="col-md">
-                    Giá Cũ: <span class="original-price text-decoration-line-through">$22.99</span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md">
-                    <a href="#" class="btn btn-light mr-2">Thêm vào giỏ hàng</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 py-3">
-            <a href="#">
-                <div class="card d-flex flex-column justify-content-center align-items-center">
-                    <img src="../image/sp1.png" class="card-img-top img-fluid" alt="...">
-                </div>
-            </a>
-            <a href="#" class="text-decoration-none">
-                <h5 style="text-align:center;">Product 1</h5>
-            </a>
-            <div class="row">
-                <div class="col-md">
-                    <p class="price"><span class="">Giá: $18.99</span></p>
-                </div>
-                <div class="col-md">
-                    Giá Cũ: <span class="original-price text-decoration-line-through">$22.99</span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md">
-                    <a href="#" class="btn btn-light">Xem sản phẩm</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 py-3">
-            <a href="#">
-                <div class="card d-flex flex-column justify-content-center align-items-center">
-                    <img src="../image/sp1.png" class="card-img-top img-fluid" alt="...">
-                </div>
-            </a>
-            <a href="#" class="text-decoration-none">
-                <h5 style="text-align:center;">Product 1</h5>
-            </a>
-            <div class="row">
-                <div class="col-md">
-                    <p class="price"><span class="">Giá: $18.99</span></p>
-                </div>
-                <div class="col-md">
-                    Giá Cũ: <span class="original-price text-decoration-line-through">$22.99</span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md">
-                    <a href="#" class="btn btn-light">Xem sản phẩm</a>
+                <div class="media">
+                    <img src="https://via.placeholder.com/64" class="mr-3 rounded-circle" alt="Customer Image">
+                    <div class="media-body">
+                        <h6 class="mt-0">Alice Johnson</h6>
+                        <div class="star-rating">
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9734;</span>
+                            <span>&#9734;</span>
+                            <span>&#9734;</span>
+                        </div>
+                        <p>Not as good as I expected. The features are quite basic.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!--  -->
+      <!-- Review Form -->
+      <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title">Leave a Review</h5>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="rating">Rating</label>
+                    <select class="form-control" id="rating">
+                        <option value="5">&#9733;&#9733;&#9733;&#9733;&#9733; - Tuyệt Vời</option>
+                        <option value="4">&#9733;&#9733;&#9733;&#9733;&#9734; - Rất Tốt</option>
+                        <option value="3">&#9733;&#9733;&#9733;&#9734;&#9734; - Tốt</option>
+                        <option value="2">&#9733;&#9733;&#9734;&#9734;&#9734; - Tệ</option>
+                        <option value="1">&#9733;&#9734;&#9734;&#9734;&#9734; - Rất Tệ</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="comment">Comment</label>
+                    <textarea class="form-control" id="comment" rows="3" placeholder="Write your review here"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="productImage">Thêm Ảnh Sản Phẩm</label>
+                    <input type="file" class="form-control-file" id="productImage">
+                </div>
+                <button type="submit" class="btn btn-primary">Đăng</button>
+            </form>
+        </div>
+    </div>
+</div>
 @endsection
 {{-- đặt tên cho trang web --}}
-@section('title', 'Trang Chủ')
+@section('title', 'Chi Tiết Sản Phẩm')
 {{-- Dùng để code css cho trang này --}}
 @section('header')
     <link rel="stylesheet" href="{{ asset('product_detail.css') }}">
